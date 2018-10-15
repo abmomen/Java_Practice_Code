@@ -13,21 +13,21 @@ class Course{
 ``` 
 #### যে সব যায়গায় প্যাকেজ স্টেটমেন্ট লিখা যাবে না :
 * সবার নিচে লিখা যাবে না,লিখলে কম্পাইল ইরর খাবে। 
-#### যেমনঃ 
+##### যেমনঃ 
 ```java
 class Course{
 }
 package certification;
 ```    
 * ক্লাসের ভেতরে লিখা যাবে না। 
-#### যেমনঃ 
+##### যেমনঃ 
 ```java
 class Course{
     package certification;
 }
 ```
 * আর একটা ক্লাসের একের বেশী প্যাকেজ থাকতে পারবে না , যেটা আগেই বলছি।
-#### যেমনঃ 
+##### যেমনঃ 
 ```java
 package certification;
 package anotherpackage;
