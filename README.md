@@ -3,8 +3,8 @@
 ### প্যাকেজ কি :
 #### প্যাকেজ হচ্ছে একটা ফোল্ডারের মত যেখানে রিলেটেড ক্লাস গুলো আলাদা ভাবে রাখা যায় ,যে কোনো জাভা ক্লাস অবশ্যই একটি প্যাকেজ এক মধ্যে থাকবে। 
 ### বুলেট পয়েন্টঃ
-     * একটা ক্লাস একটা প্যাকেজের আন্ডারেই থাকতে পারবে । 
-     * প্যাকেজ স্টেটমেন্ট সবার উপরে লিখতে হবে ।
+     * একটা ক্লাস একটাই প্যাকেজের আন্ডারে থাকবে । 
+     * প্যাকেজ স্টেটমেন্ট টি সবার উপরে লিখতে হবে ।
 ##### উদাহরনঃ 
 ```java
 package certification;
@@ -34,8 +34,6 @@ package anotherpackage;
 class Course{
 }
 ```
-#### প্যাকেজের প্যাচাল শেষ ।
-
 ### IMPORT STATEMENT:
 #### একই প্যাকেজের ক্লাস বা ইন্টারফেস ব্যাবহার করতে শুধু তাদের নাম দিয়েই ব্যাবহার করা যাবে কিন্তু অন্য প্যাকেজ এর ক্লাস ব্যবহার করতে হলে তাদের import করে নিতে হবে।
 ##### যেমনঃ 
@@ -52,4 +50,76 @@ import packageName.*;
 class ClassName{
 }
 ```
- 
+### COMMENTS:
+#### মাল্টিলাইন ও সিঙ্গেললাইন কমেন্ট ।
+```java 
+class MyClass{
+    /*
+     comments that span multiple 
+     line of code.
+    */
+   
+    /*
+     *multiple line comment that
+     *has * in every line.
+     */
+     
+    // single line comment.
+}
+```
+#### Some uncommon use of comment.
+```java
+String name= /* Harry */ "Momen";
+System.out.println(name);
+//Output:Momen
+```
+```java
+String name= "/* Harry */ Momen";
+System.out.println(name);
+//Output:/* Harry */ Momen
+```
+```java
+String name="This /* will not
+                  */ Compile";
+System.out.println(name);
+//This code won't compile.
+```
+### Java Source Code file.
+#### একটি সোর্স ফাইলের মধ্যে অনেক গুলো ক্লাস আথবা ইন্টারফেস থাকতে পারে ।যেমনঃ Content of java source file `Multiple1.java` 
+```java
+interface Printable{
+    //...other details
+}
+interface Movable{
+    //...other details
+}
+```
+#### Content of Multiple2.java
+```java
+interface Printable{
+    //...other details
+}
+class MyClass{
+    //...other details
+}
+interface Movable{
+    //...
+}
+class Car{
+    //...other details.
+}
+```
+#### কিন্তু একটি সোর্স ফাইলে একটিই পাবলিক ক্লাস থাকতে পারবে এবং পাবলিক ক্লাসটির নাম সোর্স ফাইলের নামের সাথে অবশ্যই মিলতে হবে।
+#### যেমনঃ `Test.java`
+```java 
+public class Test{
+    //other details
+}
+class B{
+    //other details
+}
+interface C{
+    //other details
+}
+```
+#### আর কোনো সোর্স ফাইলে কোনো পাবলিক ক্লাস না থাকলেও প্রোগ্রাম ঠিক ঠাক ভাবে রান করবে। 
